@@ -1,0 +1,307 @@
+body {
+     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 14px;
+    color:black;
+    background-color:white;
+    -webkit-font-smoothing:antialiased;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+p {
+    margin: 0 0 10px 0;
+}
+
+.container {
+   width: 100%; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*header*/
+.header {
+    width: 100%;
+   position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100px;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+     border-bottom: 1px solid  black;
+}
+/*nav*/
+.nav {
+    display: flex;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.nav__link:first-child {
+    margin-left: 0;
+}
+.nav__link {
+    margin-left: 50px;
+    color:white;
+    text-decoration: none;
+    opacity: .75;
+    transition: opacity .1s linear;
+    font-weight: 900;
+}  
+.nav__link:hover{
+    opacity: 1;
+   
+}
+/*intro*/
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 850px;
+    padding-top: 100px;
+    background: white url("img/qwe.jpeg") center no-repeat;
+   text-align: center;
+}
+
+}
+.intro__inner {
+    max-width: 970px;
+    width: 100%;
+    margin: auto;
+    
+   
+}
+.intro__title {
+    margin: 0 0 30px;
+  font-family: 'Open Sans', sans-serif;
+    font-size: 65px;
+    line-height: 1;
+    color: blueviolet;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+.intro__subtitle {
+    font-size: 22px;
+    color: blueviolet;
+    margin-bottom: 60px;
+}
+/*button*/
+.btn {
+   display: inline-block;
+   vertical-align: top;
+    font-size: 13px;
+    color: white;
+    padding: 15px 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    text-decoration: none;
+    transition:   background .1s lines;
+}
+.btn--red {
+    background-color: red;
+}
+
+.btn--red:hover {
+     background-color: brown;
+}
+
+/*features*/
+.features {
+   display: flex; 
+    padding: 95px 0;
+flex-wrap: wrap;
+}
+
+.features__item {
+    width: 33.333%;
+    text-align: center;
+    padding: 0 30px;
+    margin: 25px 0;
+    
+}
+
+.features__icon {
+  margin-bottom:  20px; 
+}
+.features__title {
+    
+    font-size: 14px;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.features__text {
+        font-size: 14px;
+ color: gray;
+    line-height: 1.5;
+}
+/*works*/
+.works {
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.works__item {
+    width: 25%;
+    height: 350px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    
+     position: relative;
+    overflow: hidden;
+}
+.works__item:hover .works__content {
+    opacity: 1;
+}
+
+.works__photo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d(-50%, -50%, 0)
+}
+.works__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+   background-color: rgba(232, 69,69,.9);
+       text-align: center; 
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: opacity .2s linear;
+}
+.works__title{
+    margin-bottom: 5px;
+  font-size: 14px;
+   font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+}
+.works__text{
+   font-size: 14px;
+    color: white;
+    
+}
+
+/* team*/
+.team{
+    margin: 100px 0;
+    
+}
+.team_inner{
+   display:flex;
+    flex-wrap: wrap;
+    margin: 0 -15px; 
+
+}
+
+.team__item{
+   width: 25%; 
+    padding: 0 15px;
+}
+.team__photo{
+    display: flex;
+    max-width: 100%;
+    height:auto;
+    margin-bottom: 20px;
+}
+.team__name{
+      margin-bottom: 8px;
+   font-size: 22px; 
+    color: black;
+}
+
+.team__prof{
+       margin-bottom: 15px;
+   font-size: 13px;
+    color: red;
+    text-transform: uppercase;
+}
+.team__text {
+ font-size: 14px;
+    color: gray;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/*Icon*/
+.social{
+    display: flex;      
+}
+.social__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid grey;
+    
+}
+.social__item:hover {
+    background-color: aqua;
+}
+
+.social__item:hover .social__icon
+{
+    fill: white;
+}
+
+.social__icon{
+    display: block;
+    height: 8px;
+    fill: grey;
+    transition: fill .1s lines;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
